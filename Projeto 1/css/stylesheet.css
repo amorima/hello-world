@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #2e2e2e;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #f4b900;
+    opacity: 0.9;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img { /* Definições da imagem do logotipo */
+    max-width: 150px; 
+    height: auto;
+}
+
+.fullimg img {
+    width: 100%;        /* Ajusta a imagem à largura da janela */
+    height: 100vh;       /* Ajusta a imagem à altura da janela */
+    object-fit: cover;   /* A imagem cobre toda a área, mantendo a proporção */
+    object-position: center; /* Centra a imagem na janela */
+    overflow: hidden;    /* Garante que o conteúdo excedente não seja visível */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 0.5rem;
+}
+
+nav ul li a {
+    color: #151515;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f81c1d;
+}
+
+.hero {
+    padding: 2rem 2rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #2f4f4f;
+}
+
+.cta-button {
+    background-color: #ffcc33;
+    color: #2f4f4f;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffb84d;
+}
+
+section {
+    padding-top: 8rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #3e8e7e;
+    text-align: center;
+}
+
+section p {
+    text-align: center;
+    margin: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Cantos arredondados para o topo */
+}
+
+.card h3 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #3e8e7e;
+}
+
+.card p {
+    padding: 0 1rem;
+    color: #666;
+    flex-grow: 1;
+}
+
+.card-double { /* Definições para as secções de duas colunas */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.card-double img {
+    width: 420px;
+    align-items: center;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 8px 8px; /* Cantos arredondados para o topo */
+}
+
+.ver-mais {
+    margin: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffcc33;
+    color: #2f4f4f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ver-mais:hover {
+    background-color: #ffb84d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem;
+    max-width: 500px;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2f4f4f;
+    color: #ffdd57;
+    margin-top: 2rem;
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+}
