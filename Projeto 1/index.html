@@ -10,12 +10,13 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
     <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
+    <!-- Cabeçalho fixo com logo e menu de navegação -->
     <header>
         <div class="logo">
-            <img src="img/logo.png" alt="Logotipo do Lino's">
+            <a href="#home"><img src="img/logo.png" alt="Logotipo do restaurante Lino's"></a>
         </div>
         <nav>
             <ul>
@@ -31,16 +32,16 @@
     <main id="home">
         <div class="fullimg">
             <h2>O prazer de bem comer</h2>
-            <img src="img/hero_big.webp" alt="Imagem do restaurante">
+            <img src="img/hero_big.webp" alt="Vista do interior acolhedor do restaurante Lino's">
         </div>
     </main>
 
+    <!-- Secção introdutória -->
     <section id="intro">
-        <br><br><br>
-        <section class="hero">
+        <div class="hero">
             <h2>Bem-vindo ao Lino's</h2>
             <p>Restaurante de comida tradicional e caseira, com sabores autênticos e ambiente acolhedor.</p>
-        </section>
+        </div>
     </section>
 
     <section id="sobre-nos">
@@ -49,6 +50,7 @@
                 <img src="img/chef.jpg" alt="Imagem do restaurante">
             </div>
             <div class="card-double">
+            <h2>Sobre Nós</h2>
             <p>O restaurante <i>Lino's</i> é uma celebração dos sabores tradicionais portugueses, oferecendo pratos que transmitem um toque caseiro e autêntico. Entre as especialidades de carne, destacam-se o clássico Cozido à Portuguesa e uma rica Feijoada, inspirada na cozinha familiar e tradicional. Para quem prefere peixe, o menu inclui opções como bacalhau com grão-de-bico, peixe assado no forno e uma seleção de peixes fritos acompanhados por arroz de tomate. As sobremesas são frescas e variadas, combinando frutas tropicais — como papaia, manga e melancia — com doces tradicionais como o leite creme e o Molotov, encerrando a refeição com um toque de leveza e nostalgia. O Lino's é o espaço ideal para quem aprecia uma refeição calorosa, repleta de sabores familiares e um ambiente acolhedor, onde cada prato conta uma história.</p>
             </div>
         </div>
@@ -120,7 +122,7 @@
                 <div class="map-container">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.8342516067684!2d-8.742194!3d41.379536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24682a7a6b8ab7%3A0x9f2349d59e196b14!2sESMAD!5e0!3m2!1sen!2spt!4v1676055484135!5m2!1sen!2spt"
-                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -129,24 +131,34 @@
 
     <section id="reservas">
         <h2>Reservas</h2>
-        <form action="#" method="post">
-            <label for="data">Data</label>
-            <input type="date" id="data" name="data" required>
-            <label for="hora">Hora</label>
-            <input type="time" id="hora" name="hora" required>
-            <label for="pessoas">Número de Pessoas</label>
-            <input type="number" id="pessoas" name="pessoas" min="1" max="20" required>
-            <button class="cta-button" type="submit">Reservar</button>
-        </form>
-
+        <div class="reservas-container">
+            <div class="form-container">
+                <form action="#" method="post">
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data" required>
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" name="hora" required>
+                    <label for="pessoas">Número de Pessoas</label>
+                    <input type="number" id="pessoas" name="pessoas" min="1" max="20" required>
+                    <button class="cta-button" type="submit">Reservar</button>
+                </form>
+            </div>
+            <div class="reservas-info">
+                <h3>Informações sobre as Reservas</h3>
+                <p><strong>Horário:</strong> Segunda a Domingo, das 12h às 23h.</p>
+                <p><strong>Reservas:</strong> Sujeitas à disponibilidade. Faça sua reserva com pelo menos 24h de antecedência.</p>
+                <p><strong>Contactos:</strong> Ligue-nos pelo telefone ou use o formulário ao lado para reservar.</p>
+            </div>
+        </div>
     </section>
+    
     <a href="tel:+1234567890" class="contact-button">
         <img src="img/contacto.png" alt="Contacte-nos">
     </a>
     <footer>
-        <p>&copy; 2024 Lino's. Todos os direitos reservados - António Amorim - <b>TSIW</b>.
-            <br>
-            Segue-nos em:&nbsp;&nbsp;<a href="https://www.instagram.com/_tsiw.esmad" target="_blank"><i class="fab fa-instagram"></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/LTSIW" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+        <p>&copy; 2024 Lino's. Todos os direitos reservados - António Amorim - <b>TSIW</b>.</p>
+        <p>Segue-nos em:&nbsp;&nbsp;<a href="https://www.instagram.com/_tsiw.esmad_" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/LTSIW" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></p>
+
     </footer>
 </body>
 </html>
