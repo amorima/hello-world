@@ -1,11 +1,11 @@
-* {
+* {             /* Seletor universal com algumas definições que vão afetar a página toda */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+body {          /* Definições que afetam o body da página */
     color: #2e2e2e;
     line-height: 1.6;
     background-color: #f8f8f8;
@@ -13,14 +13,12 @@ body {
 
 header {        /* Definições do header */
     background-color: #f4b900;
-    opacity: 0.9;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-    position: fixed;    /* Mantem o header fixo */
-    width: 100%;
-    top: 0;
-    z-index: 1000;  /* Para manter o header sempre em cima dos demais elementos */
+    opacity: 0.9;           /* Transparencia do header */
+    padding: 1rem;          /* Espaçamento à volta dos elementos 1 REM = 16px */
+    text-align: center;         /* Centra o texto do header */
+    position: fixed;            /* Mantem o header fixo */
+    width: 100%;            /* Mantém o header de um lado ao outro da página */
+    z-index: 1000;          /* Para manter o header sempre em cima dos demais elementos */
 }
 
 header .logo img {      /* Definições da imagem do logotipo */
@@ -36,45 +34,49 @@ header .logo img {      /* Definições da imagem do logotipo */
     align-items: center;
 }
 
-.fullimg img {      /* Definições da imagem abaixo do header */
+.fullimg img {          /* Definições da imagem abaixo do header */
     width: 100%;
-    height: 100vh;       /* Ajusta a imagem à altura da janela */
-    object-fit: cover;   /* A imagem cobre toda a área, mantendo a proporção */
+    height: 100vh;          /* Ajusta a imagem à altura da janela */
+    object-fit: cover;          /* A imagem cobre toda a área, mantendo a proporção */
     object-position: center;
-    overflow: hidden;    /* Garante que o conteúdo excedente não seja visível */
+    overflow: hidden;           /* Garante que o conteúdo excedente não seja visível */
 }
 
-.fullimg h2 { /* Definições do texto na imagem abaixo do header */
+.fullimg h2 {           /* Definições do texto na imagem abaixo do header */
     position: absolute;
     color: white;
-    text-shadow:5px 5px #151515;
+    text-shadow:5px 5px #151515;            /* Coloca uma sombra no texto 5px para baixo e 5px para a direita*/
     text-align: center;
     font-size: 100px;
-    font-family: 'cookie';
+    font-family: 'cookie';          /* Altera o tipo de letra do header para Cookie */
     font-weight: 500; /* Peso da font */
 }
 
-nav ul {    /* Formata a lista não ordenada de links do menu */
+nav ul {            /* Formata a lista não ordenada de links do menu */
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2rem;          /* Espaçamento entre elementos da lista */
     padding-top: 0.5rem;
 }
 
-nav ul li a {   /* Formata os links do menu */
+nav ul li a {           /* Formata os links do menu */
     color: #151515;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s;         /* Define uma transição entre a cor atribuida e o cor do hover */
 }
 
-nav ul li a:hover {     /* Define a cor do hover do menu */
+nav ul li a:hover {         /* Define a cor do hover do menu */
     color: #f81c1d;
 }
 
-.hero {
-    padding: 2rem 2rem 2rem;
+html {          /* Permite uma transição suave entre as diferentes secções */
+    scroll-behavior: smooth;
+}
+
+.hero {         /* Definições da caixa de texto de saudação */
+    padding: 2rem;
     border-radius: 8px;
     text-align: center;
     margin: 0 auto;
@@ -82,54 +84,52 @@ nav ul li a:hover {     /* Define a cor do hover do menu */
     max-width: 950px;
 }
 
-.hero h2 {
+.hero h2 {          /* Formatação do header 2 desta secção */
     font-size: 2rem;
     color: #2f4f4f;
     font-family: 'cookie';
 }
 
-.cta-button {
+.cta-button {           /* Definições dos botões click to action (ver mais) */
     background-color: #ffcc33;
     color: #2f4f4f;
     padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 5px;
     font-size: 1rem;
-    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.cta-button:hover {
+.cta-button:hover {         /* Definições do hover do botão click to action */
     background-color: #ffb84d;
 }
 
-section {
-    padding-top: 5rem; /* Mantém espaçamento interno */
-    margin-top: -8rem; /* Remove o espaço visual extra */
-    scroll-margin-top: 5rem; /* Compensa a altura do header fixo */
+section {           /* Definições das secções da página */
+    padding-top: 5rem;      /* Mantém espaçamento interno */
+    margin-top: -8rem;      /* Remove o espaço visual extra */
+    scroll-margin-top: 5rem;        /* Compensa a altura do header fixo */
     max-width: 1100px;
     margin: auto;
 }
 
-section h2 {
+section h2 {            /* Definições de headers das secções da página */
     margin-bottom: 1rem;
     color: #3e8e7e;
     text-align: center;
 }
 
-section p {
+section p {         /* Definições de texto das secções da página */
     text-align: center;
     margin: 1rem;
 }
 
-.card-container {
+.card-container {           /* Definições do container dos cards dos "pratos" */
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
 }
 
-.card {
+.card {         /* Definições dos cards dos "pratos" para que fiquem responsivos */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -141,26 +141,26 @@ section p {
     justify-content: space-between;
 }
 
-.card img {
+.card img {         /* Definições das imagens dos cards */
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px 8px 0 0; /* Cantos arredondados para o topo */
 }
 
-.card h3 {
+.card h3 {         /* Definições dos headers h3 dos cards */
     margin: 1rem 0;
     font-size: 1.2rem;
     color: #3e8e7e;
 }
 
-.card p {
+.card p {         /* Definições do texto dos cards */
     padding: 0 1rem;
     color: #666;
     flex-grow: 1;
 }
 
-.card-double { /* Definições para as secções de duas colunas */
+.card-double {          /* Definições para as secções de duas colunas */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -173,7 +173,7 @@ section p {
     padding: 1rem;
 }
 
-.card-double img {
+.card-double img {          /* Definições das imagens para as secções de duas colunas */
     width: 420px;
     align-items: center;
     height: 100%;
@@ -181,7 +181,7 @@ section p {
     border-radius: 8px 8px 8px 8px; /* Cantos arredondados para o topo */
 }
 
-.ver-mais {
+.ver-mais {         /* Definições para os botões ver mais */
     margin: 1rem;
     padding: 0.75rem 1.5rem;
     background-color: #ffcc33;
@@ -192,12 +192,11 @@ section p {
     transition: background-color 0.3s;
 }
 
-.ver-mais:hover {
+.ver-mais:hover {         /* Definições para o hover dos botões ver mais */
     background-color: #ffb84d;
 }
 
-/* Estrutura da secção de contactos */
-#contactos {
+#contactos {            /* Estrutura da secção de contactos */
     display: flex; 
     flex-direction: column;
     align-items: center; /* Centraliza horizontalmente */
@@ -205,9 +204,7 @@ section p {
     text-align: center;
 }
 
-
-/* Estrutura flex da container principal */
-.contact-container {
+.contact-container {            /* Estrutura flex da container principal */
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -216,11 +213,11 @@ section p {
     align-items: center;
 }
 
-.form-container {
+.form-container {           /* Definição flex do container dos formulários */
     flex: 1;
 }
 
-form {
+form {          /* Definições dos formulários */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -229,19 +226,18 @@ form {
     margin: auto;
 }
 
-form label {
+form label {        /* Definição do peso da font no texto dos botões */
     font-weight: bold;
 }
 
-form input, form textarea, form button {
+form input, form textarea, form button {            /* Definições dos campos imput, textarea e botão dos formulários */
     padding: 0.75rem;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* Estilo do container de informações e mapa */
-.info-container {
+.info-container {           /* Estilo do container de informações e mapa */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -250,19 +246,18 @@ form input, form textarea, form button {
     padding: 2rem;
 }
 
-.contact-info p {
+.contact-info p {           /* Estilo da informação de contacto */
     margin: 0.5rem 0;
 }
 
-/* Estilo do mapa */
-.map-container iframe {
+.map-container iframe {         /* Formatação do mapa */
     border-radius: 8px;
     width: 100%;
     height: 300px;
 }
 
 
-footer {
+footer {            /* Definições do footer */
     text-align: center;
     padding: 1rem;
     background-color: #2f4f4f;
@@ -270,20 +265,24 @@ footer {
     margin-top: 2rem;
 }
 
-#reservas {
+footer a {         /* Faz com que a cor dos links seja a mesma do elemento principal (utilizei para que os favicons no footer ficassem da mesma cor que o texto) */
+    color: inherit;
+}
+
+#reservas {         /* Definições da àrea de reservas */
     padding: 2rem;
 }
 
-.reservas-container {
+.reservas-container {           /* Definições do container em grid das reservas */
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    grid-template-columns: 1fr 1fr;          /* Duas colunas iguais */
     gap: 2rem;
     align-items: center;
     margin-top: 1rem;
     max-width: 950px;
 }
 
-.reservas-info {
+.reservas-info {            /* Definições da secção de informações das reservas */
     background-color: #f9f9f9;
     padding: 2rem;
     border-radius: 8px;
@@ -291,18 +290,18 @@ footer {
     text-align: left;
 }
 
-.reservas-info h3 {
+.reservas-info h3 {             /* Definições do header h3 da secção de informação das reservas */
     color: #3e8e7e;
     margin-bottom: 1rem;
 }
 
-.reservas-info p {
+.reservas-info p {          /* Definições de texto da secção de informação das reservas */
     margin-bottom: 0.5rem;
     color: #666;
     text-align: left;
 }
 
-.contact-button {
+.contact-button {           /* Definições do container do botão fixo de contacto */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -314,16 +313,8 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.contact-button img {
+.contact-button img {           /* Definições da imagem no container do botão fixo de contacto */
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-a {
-    color: inherit;
-}
-
-html {
-    scroll-behavior: smooth;
 }
