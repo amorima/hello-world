@@ -71,6 +71,14 @@ nav ul li a:hover {         /* Define a cor do hover do menu */
     color: #f81c1d;
 }
 
+@media (max-width: 768px) {         /* Para resolver a desformatação do menu em ecrãs menores */
+    nav ul {
+        overflow-x: auto;           /* Cria um menu deslizante horizontal */
+        white-space: nowrap;
+        padding: 10px 0;
+    }
+}
+
 html {          /* Permite uma transição suave entre as diferentes secções */
     scroll-behavior: smooth;
 }
@@ -109,6 +117,7 @@ section {           /* Definições das secções da página */
     scroll-margin-top: 5rem;        /* Compensa a altura do header fixo */
     max-width: 1100px;
     margin: auto;
+    padding: 0.5rem;
 }
 
 section h2 {            /* Definições de headers das secções da página */
@@ -170,11 +179,11 @@ section p {         /* Definições de texto das secções da página */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .card-double img {          /* Definições das imagens para as secções de duas colunas */
-    width: 420px;
+    width: auto;
     align-items: center;
     height: 100%;
     object-fit: cover;
@@ -280,6 +289,12 @@ footer a {         /* Faz com que a cor dos links seja a mesma do elemento princ
     align-items: center;
     margin-top: 1rem;
     max-width: 950px;
+}
+
+@media (max-width: 768px) {         /* Coloca uma coluna abaixo da outra em ecrãs pequenos */
+    .reservas-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 .reservas-info {            /* Definições da secção de informações das reservas */
